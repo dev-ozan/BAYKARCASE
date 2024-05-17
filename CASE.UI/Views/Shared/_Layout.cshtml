@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozan GENÇ</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CASE.UI.styles.css" asp-append-version="true" />
+</head>
+<style>
+    body{
+        background-color: #fffbeb;
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="color:#773412;" class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <a style="color:#773412 ; font-size:4vh ; margin-left:3vh" class="nav-link active fw-bolder" aria-current="page" href="#">Collers</a>
+                    <div class="d-flex justify-content-end align-items-center w-100">
+                        <a style="color:#773412" class="nav-link active fw-bolder" aria-current="page" href="#">Products</a>
+                        <a style="color:#773412" class="nav-link active fw-bolder" aria-current="page" href="#">Solutions</a>
+                        <a style="color:#773412" class="nav-link active fw-bolder" aria-current="page" href="#">Pricing</a>
+                        <a style="color:#773412" class="nav-link active fw-bolder" aria-current="page" href="#">Resources</a>
+                        <a style="color:#773412" class="nav-link active fw-bolder" aria-current="page" href="#">Log In</a>
+                        <button style="color:#773412" class="nav-link active fw-bolder bg-white" aria-current="page" href="#">Sign up now</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3" style="background-color:#fffcf0">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - CASE.UI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
